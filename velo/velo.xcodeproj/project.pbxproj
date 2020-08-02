@@ -29,8 +29,8 @@
 		6DC759D824D6D0B200B35E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DC759DB24D6D0B200B35E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DC759DD24D6D0B200B35E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewBicyclesScreen.storyboard; sourceTree = "<group>"; };
-		6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBicyclesViewController.swift; sourceTree = "<group>"; };
+		6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ViewBicyclesScreen.storyboard; path = "Journey T/View Bicycles Journey/ViewBicyclesScreen.storyboard"; sourceTree = "<group>"; };
+		6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewBicyclesViewController.swift; path = "Journey T/View Bicycles Journey/ViewBicyclesViewController.swift"; sourceTree = "<group>"; };
 		6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBicyclesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +45,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D62565A24D708760031D594 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759DA24D6D0B200B35E8A /* LaunchScreen.storyboard */,
+			);
+			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		6D62565B24D7088F0031D594 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
+				6DC759D024D6D0B000B35E8A /* MainViewController.swift */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+		6D62565C24D708C30031D594 /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				6D62565D24D708F70031D594 /* View Bicycles Journey */,
+			);
+			name = Journey;
+			sourceTree = "<group>";
+		};
+		6D62565D24D708F70031D594 /* View Bicycles Journey */ = {
+			isa = PBXGroup;
+			children = (
+				6D62565E24D709170031D594 /* View Bicycles */,
+			);
+			name = "View Bicycles Journey";
+			sourceTree = "<group>";
+		};
+		6D62565E24D709170031D594 /* View Bicycles */ = {
+			isa = PBXGroup;
+			children = (
+				6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */,
+				6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */,
+				6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */,
+			);
+			name = "View Bicycles";
+			sourceTree = "<group>";
+		};
 		6DC759C024D6D0B000B35E8A = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +107,9 @@
 		6DC759CB24D6D0B000B35E8A /* velo */ = {
 			isa = PBXGroup;
 			children = (
-				6DC759E824D6D59100B35E8A /* Launch Screen */,
-				6DC759E724D6D56E00B35E8A /* Main Screen */,
-				6DE79E1A24D6DDF70096859B /* Journey */,
+				6D62565A24D708760031D594 /* Launch Screen */,
+				6D62565B24D7088F0031D594 /* Main Screen */,
+				6D62565C24D708C30031D594 /* Journey */,
 				6DC759EC24D6D65F00B35E8A /* Resources */,
 				6DC759E624D6D55F00B35E8A /* Supporting Files */,
 			);
@@ -83,23 +126,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6DC759E724D6D56E00B35E8A /* Main Screen */ = {
-			isa = PBXGroup;
-			children = (
-				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
-				6DC759D024D6D0B000B35E8A /* MainViewController.swift */,
-			);
-			path = "Main Screen";
-			sourceTree = "<group>";
-		};
-		6DC759E824D6D59100B35E8A /* Launch Screen */ = {
-			isa = PBXGroup;
-			children = (
-				6DC759DA24D6D0B200B35E8A /* LaunchScreen.storyboard */,
-			);
-			path = "Launch Screen";
-			sourceTree = "<group>";
-		};
 		6DC759EC24D6D65F00B35E8A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,40 +133,6 @@
 				6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6DE79E1924D6DDC60096859B /* View Bicycles Journey */ = {
-			isa = PBXGroup;
-			children = (
-				6DE79E2224D6DEA20096859B /* View Bicyles */,
-			);
-			path = "View Bicycles Journey";
-			sourceTree = "<group>";
-		};
-		6DE79E1A24D6DDF70096859B /* Journey */ = {
-			isa = PBXGroup;
-			children = (
-				6DE79E1924D6DDC60096859B /* View Bicycles Journey */,
-			);
-			path = Journey;
-			sourceTree = "<group>";
-		};
-		6DE79E1F24D6DE720096859B /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		6DE79E2224D6DEA20096859B /* View Bicyles */ = {
-			isa = PBXGroup;
-			children = (
-				6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */,
-				6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */,
-				6DE79E1F24D6DE720096859B /* View Model */,
-			);
-			name = "View Bicyles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
