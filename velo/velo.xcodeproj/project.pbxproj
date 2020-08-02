@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */; };
 		6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */; };
-		6DC759D124D6D0B000B35E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759D024D6D0B000B35E8A /* ViewController.swift */; };
+		6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759D024D6D0B000B35E8A /* MainViewController.swift */; };
 		6DC759D424D6D0B000B35E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC759D224D6D0B000B35E8A /* Main.storyboard */; };
 		6DC759D724D6D0B000B35E8A /* velo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */; };
 		6DC759D924D6D0B200B35E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC759D824D6D0B200B35E8A /* Assets.xcassets */; };
 		6DC759DC24D6D0B200B35E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC759DA24D6D0B200B35E8A /* LaunchScreen.storyboard */; };
+		6DE79E1C24D6DE2A0096859B /* ViewBicyclesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */; };
+		6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */; };
+		6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DC759C924D6D0B000B35E8A /* Velo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6DC759D024D6D0B000B35E8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6DC759D024D6D0B000B35E8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6DC759D324D6D0B000B35E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DC759D624D6D0B000B35E8A /* velo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = velo.xcdatamodel; sourceTree = "<group>"; };
 		6DC759D824D6D0B200B35E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DC759DB24D6D0B200B35E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DC759DD24D6D0B200B35E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewBicyclesScreen.storyboard; sourceTree = "<group>"; };
+		6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBicyclesViewController.swift; sourceTree = "<group>"; };
+		6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBicyclesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			children = (
 				6DC759E824D6D59100B35E8A /* Launch Screen */,
 				6DC759E724D6D56E00B35E8A /* Main Screen */,
+				6DE79E1A24D6DDF70096859B /* Journey */,
 				6DC759EC24D6D65F00B35E8A /* Resources */,
 				6DC759E624D6D55F00B35E8A /* Supporting Files */,
 			);
@@ -80,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
-				6DC759D024D6D0B000B35E8A /* ViewController.swift */,
+				6DC759D024D6D0B000B35E8A /* MainViewController.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -100,6 +107,40 @@
 				6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DE79E1924D6DDC60096859B /* View Bicycles Journey */ = {
+			isa = PBXGroup;
+			children = (
+				6DE79E2224D6DEA20096859B /* View Bicyles */,
+			);
+			path = "View Bicycles Journey";
+			sourceTree = "<group>";
+		};
+		6DE79E1A24D6DDF70096859B /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				6DE79E1924D6DDC60096859B /* View Bicycles Journey */,
+			);
+			path = Journey;
+			sourceTree = "<group>";
+		};
+		6DE79E1F24D6DE720096859B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		6DE79E2224D6DEA20096859B /* View Bicyles */ = {
+			isa = PBXGroup;
+			children = (
+				6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */,
+				6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */,
+				6DE79E1F24D6DE720096859B /* View Model */,
+			);
+			name = "View Bicyles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DC759DC24D6D0B200B35E8A /* LaunchScreen.storyboard in Resources */,
+				6DE79E1C24D6DE2A0096859B /* ViewBicyclesScreen.storyboard in Resources */,
 				6DC759D924D6D0B200B35E8A /* Assets.xcassets in Resources */,
 				6DC759D424D6D0B000B35E8A /* Main.storyboard in Resources */,
 			);
@@ -173,10 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC759D124D6D0B000B35E8A /* ViewController.swift in Sources */,
+				6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
 				6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */,
 				6DC759D724D6D0B000B35E8A /* velo.xcdatamodeld in Sources */,
+				6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */,
+				6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
