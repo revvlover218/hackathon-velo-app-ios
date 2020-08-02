@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadingIndicatorViewController: UIViewController {
+class LoadingIndicatorViewController: BaseNavigationViewController {
     
     private lazy var loadingIndicatorView = LoadingIndicatorView()
 
