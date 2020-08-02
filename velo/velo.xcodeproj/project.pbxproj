@@ -58,16 +58,48 @@
 		6DC759CB24D6D0B000B35E8A /* velo */ = {
 			isa = PBXGroup;
 			children = (
-				6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */,
-				6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */,
-				6DC759D024D6D0B000B35E8A /* ViewController.swift */,
-				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
-				6DC759D824D6D0B200B35E8A /* Assets.xcassets */,
-				6DC759DA24D6D0B200B35E8A /* LaunchScreen.storyboard */,
-				6DC759DD24D6D0B200B35E8A /* Info.plist */,
-				6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */,
+				6DC759E824D6D59100B35E8A /* Launch Screen */,
+				6DC759E724D6D56E00B35E8A /* Main Screen */,
+				6DC759EC24D6D65F00B35E8A /* Resources */,
+				6DC759E624D6D55F00B35E8A /* Supporting Files */,
 			);
 			path = velo;
+			sourceTree = "<group>";
+		};
+		6DC759E624D6D55F00B35E8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759DD24D6D0B200B35E8A /* Info.plist */,
+				6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */,
+				6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DC759E724D6D56E00B35E8A /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
+				6DC759D024D6D0B000B35E8A /* ViewController.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		6DC759E824D6D59100B35E8A /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759DA24D6D0B200B35E8A /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		6DC759EC24D6D65F00B35E8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DC759D824D6D0B200B35E8A /* Assets.xcassets */,
+				6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86T4SG9LG4;
-				INFOPLIST_FILE = velo/Info.plist;
+				INFOPLIST_FILE = "velo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86T4SG9LG4;
-				INFOPLIST_FILE = velo/Info.plist;
+				INFOPLIST_FILE = "velo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
