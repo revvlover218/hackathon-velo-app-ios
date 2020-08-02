@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ViewBicyclesViewController: UIViewController {
+class ViewBicyclesViewController: BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startLoadingIndicator()
+    }
+    
+    @IBAction private func someButtonTapped(_ sender: UIButton) {
+        print("Button Pressed")
+        stopLoadingIndicator()
     }
 }

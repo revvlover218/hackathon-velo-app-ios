@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D62566124D70A050031D594 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566024D70A050031D594 /* LoadingIndicatorView.swift */; };
+		6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */; };
+		6D62566B24D716630031D594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566A24D716630031D594 /* BaseViewController.swift */; };
 		6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */; };
 		6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */; };
 		6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759D024D6D0B000B35E8A /* MainViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D62566024D70A050031D594 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
+		6D62566A24D716630031D594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6DC759C924D6D0B000B35E8A /* Velo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,40 @@
 			name = "View Bicycles";
 			sourceTree = "<group>";
 		};
+		6D62565F24D709B90031D594 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D62566924D7162D0031D594 /* Base View Controller */,
+				6D62566224D70B370031D594 /* Loading Indicator View Controller */,
+			);
+			name = "Custom Components";
+			sourceTree = "<group>";
+		};
+		6D62566224D70B370031D594 /* Loading Indicator View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */,
+				6D62566824D712B90031D594 /* Loading Indicator View */,
+			);
+			name = "Loading Indicator View Controller";
+			sourceTree = "<group>";
+		};
+		6D62566824D712B90031D594 /* Loading Indicator View */ = {
+			isa = PBXGroup;
+			children = (
+				6D62566024D70A050031D594 /* LoadingIndicatorView.swift */,
+			);
+			name = "Loading Indicator View";
+			sourceTree = "<group>";
+		};
+		6D62566924D7162D0031D594 /* Base View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D62566A24D716630031D594 /* BaseViewController.swift */,
+			);
+			name = "Base View Controller";
+			sourceTree = "<group>";
+		};
 		6DC759C024D6D0B000B35E8A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +151,7 @@
 				6D62565B24D7088F0031D594 /* Main Screen */,
 				6D62565C24D708C30031D594 /* Journey */,
 				6DC759EC24D6D65F00B35E8A /* Resources */,
+				6D62565F24D709B90031D594 /* Custom Components */,
 				6DC759E624D6D55F00B35E8A /* Supporting Files */,
 			);
 			path = velo;
@@ -208,9 +249,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */,
+				6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
 				6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */,
 				6DC759D724D6D0B000B35E8A /* velo.xcdatamodeld in Sources */,
+				6D62566B24D716630031D594 /* BaseViewController.swift in Sources */,
+				6D62566124D70A050031D594 /* LoadingIndicatorView.swift in Sources */,
 				6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */,
 				6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */,
 			);
