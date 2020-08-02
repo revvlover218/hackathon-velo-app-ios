@@ -25,6 +25,17 @@ DerivedData/
 ## Obj-C/Swift specific
 *.hmap
 
+# Custom Git ignores
+.DS_Store
+*/build/*
+xcuserdata
+profile
+DerivedData
+.idea/
+*.xcuserstate
+*.xcuserdatad
+*/xcuserdata/*
+
 ## App packaging
 *.ipa
 *.dSYM.zip
