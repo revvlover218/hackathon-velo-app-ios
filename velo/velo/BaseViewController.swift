@@ -1,5 +1,5 @@
 //
-//  ViewBicyclesViewController.swift
+//  BaseViewController.swift
 //  velo
 //
 //  Created by Reshal Luchman on 2020/08/02.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewBicyclesViewController: UIViewController {
+class BaseViewController: LoadingIndicatorViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
