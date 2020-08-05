@@ -16,5 +16,8 @@ class BaseNavigationViewController: UIViewController {
     }
     
     private func configureNavigation() {
+        let navigationController = self.navigationController?.navigationBar
+        navigationController?.barTintColor = #colorLiteral(red: 0.9684304662, green: 0.9778327037, blue: 0.9590282287, alpha: 1)
+        navigationController?.shadowImage = UIImage()
     }
 }

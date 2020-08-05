@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CJC-6G-0kq">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,10 +22,26 @@
                                     <action selector="someButtonTapped:" destination="CJC-6G-0kq" eventType="touchUpInside" id="TlE-5N-q5I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DY-nA-KGL" customClass="RoundedSquareButton" customModule="Velo" customModuleProvider="target">
+                                <rect key="frame" x="264" y="712" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GYE-MK-quw"/>
+                                    <constraint firstAttribute="width" constant="50" id="x9g-Fu-hZV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="test">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1xI-V4-WA1" firstAttribute="trailing" secondItem="7DY-nA-KGL" secondAttribute="trailing" constant="100" id="2nf-Wm-2DR"/>
                             <constraint firstItem="ubm-jl-Am2" firstAttribute="centerY" secondItem="l0c-sk-xYJ" secondAttribute="centerY" id="4S8-CC-g6y"/>
+                            <constraint firstItem="1xI-V4-WA1" firstAttribute="bottom" secondItem="7DY-nA-KGL" secondAttribute="bottom" constant="100" id="Cdg-1o-i2i"/>
                             <constraint firstItem="ubm-jl-Am2" firstAttribute="centerX" secondItem="l0c-sk-xYJ" secondAttribute="centerX" id="eM0-f6-wHE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xI-V4-WA1"/>

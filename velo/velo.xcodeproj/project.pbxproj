@@ -11,6 +11,9 @@
 		6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */; };
 		6D62566B24D716630031D594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566A24D716630031D594 /* BaseViewController.swift */; };
 		6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */; };
+		6D963E8224DB1484009F0D93 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D963E8124DB1484009F0D93 /* Icons.xcassets */; };
+		6D963E8924DB49B8009F0D93 /* MainBicyclesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D963E8824DB49B8009F0D93 /* MainBicyclesList.swift */; };
+		6D963E8B24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D963E8A24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift */; };
 		6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */; };
 		6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */; };
 		6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC759D024D6D0B000B35E8A /* MainViewController.swift */; };
@@ -21,6 +24,7 @@
 		6DE79E1C24D6DE2A0096859B /* ViewBicyclesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */; };
 		6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */; };
 		6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */; };
+		6DFA53BE24D9E8290020AABE /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA53BD24D9E8290020AABE /* RoundedSquareButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,9 @@
 		6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		6D62566A24D716630031D594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		6D963E8124DB1484009F0D93 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		6D963E8824DB49B8009F0D93 /* MainBicyclesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBicyclesList.swift; sourceTree = "<group>"; };
+		6D963E8A24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicycleCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DC759C924D6D0B000B35E8A /* Velo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC759CC24D6D0B000B35E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC759CE24D6D0B000B35E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		6DE79E1B24D6DE2A0096859B /* ViewBicyclesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ViewBicyclesScreen.storyboard; path = "Journey T/View Bicycles Journey/ViewBicyclesScreen.storyboard"; sourceTree = "<group>"; };
 		6DE79E1D24D6DE3E0096859B /* ViewBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewBicyclesViewController.swift; path = "Journey T/View Bicycles Journey/ViewBicyclesViewController.swift"; sourceTree = "<group>"; };
 		6DE79E2024D6DE870096859B /* ViewBicyclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBicyclesViewModel.swift; sourceTree = "<group>"; };
+		6DFA53BD24D9E8290020AABE /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 			children = (
 				6DC759D224D6D0B000B35E8A /* Main.storyboard */,
 				6DC759D024D6D0B000B35E8A /* MainViewController.swift */,
+				6D963E8824DB49B8009F0D93 /* MainBicyclesList.swift */,
+				6D963E8A24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift */,
 			);
 			name = "Main Screen";
 			sourceTree = "<group>";
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6D62566924D7162D0031D594 /* View Controller */,
+				6DFA53BC24D9E7BD0020AABE /* Buttons */,
 			);
 			name = "Custom Components";
 			sourceTree = "<group>";
@@ -182,9 +193,18 @@
 			isa = PBXGroup;
 			children = (
 				6DC759D824D6D0B200B35E8A /* Assets.xcassets */,
+				6D963E8124DB1484009F0D93 /* Icons.xcassets */,
 				6DC759D524D6D0B000B35E8A /* velo.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DFA53BC24D9E7BD0020AABE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6DFA53BD24D9E8290020AABE /* RoundedSquareButton.swift */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +269,7 @@
 				6DE79E1C24D6DE2A0096859B /* ViewBicyclesScreen.storyboard in Resources */,
 				6DC759D924D6D0B200B35E8A /* Assets.xcassets in Resources */,
 				6DC759D424D6D0B000B35E8A /* Main.storyboard in Resources */,
+				6D963E8224DB1484009F0D93 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +282,15 @@
 			files = (
 				6DC759D124D6D0B000B35E8A /* MainViewController.swift in Sources */,
 				6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */,
+				6D963E8924DB49B8009F0D93 /* MainBicyclesList.swift in Sources */,
+				6D963E8B24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
 				6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */,
 				6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */,
 				6DC759D724D6D0B000B35E8A /* velo.xcdatamodeld in Sources */,
 				6D62566B24D716630031D594 /* BaseViewController.swift in Sources */,
 				6D62566124D70A050031D594 /* LoadingIndicatorView.swift in Sources */,
+				6DFA53BE24D9E8290020AABE /* RoundedSquareButton.swift in Sources */,
 				6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */,
 				6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */,
 			);
