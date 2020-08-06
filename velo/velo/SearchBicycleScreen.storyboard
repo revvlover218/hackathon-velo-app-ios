@@ -104,25 +104,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-e1-Kdz">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-e1-Kdz">
                                                     <rect key="frame" x="40" y="40" width="220" height="220"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vi-AR-bwH">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Vi-AR-bwH">
                                                             <rect key="frame" x="0.0" y="0.0" width="220" height="150"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="OcU-lh-XhF"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUa-Ze-7ah">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUa-Ze-7ah">
                                                             <rect key="frame" x="10" y="160" width="200" height="19.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="GUa-Ze-7ah" firstAttribute="top" secondItem="2Vi-AR-bwH" secondAttribute="bottom" constant="10" id="88H-r9-kOU"/>
+                                                        <constraint firstItem="2Vi-AR-bwH" firstAttribute="leading" secondItem="cx2-e1-Kdz" secondAttribute="leading" id="9Z3-7e-Rlo"/>
+                                                        <constraint firstItem="GUa-Ze-7ah" firstAttribute="leading" secondItem="cx2-e1-Kdz" secondAttribute="leading" constant="10" id="Fky-4e-EvV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GUa-Ze-7ah" secondAttribute="trailing" constant="10" id="ME5-S0-vec"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Vi-AR-bwH" secondAttribute="trailing" id="NaW-6U-a80"/>
+                                                        <constraint firstItem="2Vi-AR-bwH" firstAttribute="top" secondItem="cx2-e1-Kdz" secondAttribute="top" id="TQI-Q4-qlu"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cx2-e1-Kdz" secondAttribute="bottom" constant="40" id="XV2-im-2hb"/>
+                                                <constraint firstItem="cx2-e1-Kdz" firstAttribute="top" secondItem="NYH-yJ-jKH" secondAttribute="top" constant="40" id="l7r-Bm-9DJ"/>
+                                                <constraint firstItem="cx2-e1-Kdz" firstAttribute="leading" secondItem="NYH-yJ-jKH" secondAttribute="leading" constant="40" id="mei-YC-9we"/>
+                                                <constraint firstAttribute="trailing" secondItem="cx2-e1-Kdz" secondAttribute="trailing" constant="40" id="xb6-QP-rJW"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="image" destination="2Vi-AR-bwH" id="NQ4-ob-bEP"/>
@@ -158,11 +172,22 @@
                     <connections>
                         <outlet property="searchView" destination="Z78-Zo-RnR" id="Erf-bw-mjl"/>
                         <outlet property="searchtextField" destination="a82-Y7-VpA" id="sJp-Uk-8M3"/>
+                        <segue destination="31G-Vg-oo1" kind="show" identifier="ViewBicyclesSegue" id="XDo-fY-FYI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK2-yB-J5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="910.14492753623199" y="112.5"/>
+        </scene>
+        <!--ViewBicyclesScreen-->
+        <scene sceneID="fBs-Zw-LSz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ViewBicyclesScreen" id="31G-Vg-oo1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Mmt-dq-bYD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoE-lR-ubO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cd8-Lm-vp1">
