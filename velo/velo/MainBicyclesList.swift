@@ -15,7 +15,6 @@ enum BicycleType: String {
     case eBike = "eBike"
 }
 
-
 struct BicycleItem {
     var name: String?
     var image: UIImage?
