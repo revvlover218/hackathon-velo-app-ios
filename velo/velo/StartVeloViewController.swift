@@ -1,5 +1,5 @@
 //
-//  LaunchScreenViewController.swift
+//  StartVeloViewController.swift
 //  velo
 //
 //  Created by Reshal Luchman on 2020/08/06.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LaunchScreenViewController: UIViewController {
+class StartVeloViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
