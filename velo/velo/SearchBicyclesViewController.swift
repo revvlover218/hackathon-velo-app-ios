@@ -15,6 +15,7 @@ class SearchBicyclesViewController: BaseViewController {
     
     private var bicycles = MainBicyclesList()
     private var filteredBicycles = MainBicyclesList()
+    private var selectedBicycle: BicycleItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,5 +79,10 @@ extension SearchBicyclesViewController: UICollectionViewDelegate, UICollectionVi
         let bicycle = filteredBicycles.bicylesList[indexPath.row]
         cell.setBicyle(with: bicycle)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedBicycle = filteredBicycles.bicylesList[indexPath.row]
+        performSegue(withIdentifier: "ViewBicyclesSegue", sender: self)
     }
 }

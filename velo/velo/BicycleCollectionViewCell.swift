@@ -27,6 +27,8 @@ class BicycleCollectionViewCell: UICollectionViewCell {
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 5)
         shadowView.layer.shadowRadius = 25
-        shadowView.layer.shadowOpacity = 0.2
+        shadowView.layer.shadowOpacity = 0.1
+        shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 25).cgPath
+        
     }
 }
