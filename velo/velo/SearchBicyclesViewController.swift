@@ -9,22 +9,74 @@
 import UIKit
 
 class SearchBicyclesViewController: BaseViewController {
-
+    
+    @IBOutlet var searchView: UIView!
+    @IBOutlet var searchtextField: UITextField!
+    
+    private var bicycles = MainBicyclesList()
+    private var filteredBicycles = MainBicyclesList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        filteredBicycles = bicycles
+        configureSearchView()
+        configureSearchTextField()
+    }
+}
 
-        // Do any additional setup after loading the view.
+// Custom UI Layout
+
+extension SearchBicyclesViewController {
+    
+    private func configureSearchView() {
+        searchView.layer.shadowColor = UIColor.black.cgColor
+        searchView.layer.shadowOpacity = 0.2
+        searchView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        searchView.layer.shadowRadius = 25
+        searchView.layer.shouldRasterize = true
+        searchView.layer.rasterizationScale = UIScreen.main.scale
+        searchView.layer.cornerRadius = 30
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureSearchTextField() {
+        let placeHolderText = NSAttributedString(string: "Search for a bike...",
+                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        searchtextField.attributedPlaceholder = placeHolderText
     }
-    */
+}
 
+extension SearchBicyclesViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let searchText = textField.text {
+            print(searchText)
+            //Call search method here
+        }
+    }
+    
+    private func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+}
+
+extension SearchBicyclesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filteredBicycles.bicylesList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BicycleCollectionViewCell", for: indexPath) as! BicycleCollectionViewCell
+        let bicycle = filteredBicycles.bicylesList[indexPath.row]
+        cell.setBicyle(with: bicycle)
+        return cell
+    }
 }

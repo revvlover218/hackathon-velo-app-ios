@@ -17,7 +17,9 @@ class LoadingIndicatorViewController: BaseNavigationViewController {
     }
     
     func startLoadingIndicator() {
-        self.view.addSubview(loadingIndicatorView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.view.addSubview(self.loadingIndicatorView)
+        }
     }
     
     func stopLoadingIndicator() {
