@@ -47,7 +47,7 @@ class LoadingIndicatorView: UIView {
     
     private func animateView() {
         self.alpha = 0
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.7) {
             self.alpha = 1
         }
     }
