@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-Yl-Wap">
-                                <rect key="frame" x="30" y="108" width="354" height="98.5"/>
+                                <rect key="frame" x="30" y="108" width="354" height="66"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What would you like to finance?">
                                         <attributes>
-                                            <font key="NSFont" size="36" name="Avenir-Heavy"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z78-Zo-RnR">
-                                <rect key="frame" x="30" y="236.5" width="354" height="60"/>
+                                <rect key="frame" x="30" y="204" width="354" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZn-as-lsL">
                                         <rect key="frame" x="20" y="10" width="314" height="40"/>
@@ -75,7 +75,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP9-VK-Xuw">
-                                <rect key="frame" x="30" y="336.5" width="136.5" height="27.5"/>
+                                <rect key="frame" x="30" y="304" width="136.5" height="27.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Latest Bicycles">
@@ -88,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AoK-ry-bkb">
-                                <rect key="frame" x="0.0" y="404" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="371.5" width="414" height="490.5"/>
                                 <color key="backgroundColor" red="0.96843046619999995" green="0.97783270369999997" blue="0.95902822870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Pen-lT-f11">
                                     <size key="itemSize" width="300" height="300"/>
@@ -98,7 +98,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BicycleCollectionViewCell" id="wkN-ka-5SZ" customClass="BicycleCollectionViewCell" customModule="Velo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="79" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="95.5" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NYH-yJ-jKH">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
