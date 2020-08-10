@@ -12,28 +12,21 @@ import UIKit
 
 class RoundedSquareButton: UIButton {
     
-    @IBInspectable var test: CGFloat = 0 {
+    @IBInspectable var radius: CGFloat = 0 {
         didSet {
-            self.layer.cornerRadius = test
+            self.layer.cornerRadius = radius
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setBackgroundColor()
     }
         
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setBackgroundColor()
     }
     
     override class func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
     }
-    
-     func setBackgroundColor() {
-        self.backgroundColor = #colorLiteral(red: 0.5818830132, green: 0.2156915367, blue: 1, alpha: 1)
-    }
-    
 }
