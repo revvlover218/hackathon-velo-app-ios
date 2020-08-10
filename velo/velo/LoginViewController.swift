@@ -106,7 +106,7 @@ extension LoginViewController {
     private func startSpinnerViewAnimation() {
         UIView.animate(withDuration: 3,
                        delay: 0,
-                       usingSpringWithDamping: 0.8,
+                       usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 5,
                        options: [.curveEaseInOut, .repeat, .autoreverse],
                        animations: {
