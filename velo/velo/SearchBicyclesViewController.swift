@@ -83,6 +83,6 @@ extension SearchBicyclesViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedBicycle = filteredBicycles.bicylesList[indexPath.row]
-        performSegue(withIdentifier: "ViewBicyclesSegue", sender: self)
+        performSegue(withIdentifier: "LoginSegue", sender: self)
     }
 }

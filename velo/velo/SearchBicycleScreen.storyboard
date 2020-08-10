@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dof-VB-ewU">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -89,7 +89,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AoK-ry-bkb">
                                 <rect key="frame" x="0.0" y="371.5" width="414" height="490.5"/>
-                                <color key="backgroundColor" red="0.96843046619999995" green="0.97783270369999997" blue="0.95902822870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Pen-lT-f11">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -151,7 +151,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96843046619999995" green="0.97783270369999997" blue="0.95902822870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dEC-Yl-Wap" firstAttribute="leading" secondItem="UVk-WC-nVU" secondAttribute="leading" constant="30" id="Iny-Vf-vHs"/>
                             <constraint firstItem="UVk-WC-nVU" firstAttribute="trailing" secondItem="Z78-Zo-RnR" secondAttribute="trailing" constant="30" id="PPw-b7-r2k"/>
@@ -172,17 +172,17 @@
                     <connections>
                         <outlet property="searchView" destination="Z78-Zo-RnR" id="Erf-bw-mjl"/>
                         <outlet property="searchtextField" destination="a82-Y7-VpA" id="sJp-Uk-8M3"/>
-                        <segue destination="31G-Vg-oo1" kind="show" identifier="ViewBicyclesSegue" id="XDo-fY-FYI"/>
+                        <segue destination="31G-Vg-oo1" kind="show" identifier="LoginSegue" id="XDo-fY-FYI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PK2-yB-J5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="910.14492753623199" y="112.5"/>
         </scene>
-        <!--ViewBicyclesScreen-->
+        <!--LoginScreen-->
         <scene sceneID="fBs-Zw-LSz">
             <objects>
-                <viewControllerPlaceholder storyboardName="ViewBicyclesScreen" id="31G-Vg-oo1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="LoginScreen" id="31G-Vg-oo1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Mmt-dq-bYD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoE-lR-ubO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

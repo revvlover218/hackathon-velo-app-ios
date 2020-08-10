@@ -16,6 +16,6 @@ class BaseViewController: LoadingIndicatorViewController {
     }
     
     private func configureUI() {
-        self.view.backgroundColor = #colorLiteral(red: 0.9684304662, green: 0.9778327037, blue: 0.9590282287, alpha: 1)
+//        self.view.backgroundColor = #colorLiteral(red: 0.9684304662, green: 0.9778327037, blue: 0.9590282287, alpha: 1)
     }
 }
