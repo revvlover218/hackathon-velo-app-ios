@@ -17,9 +17,9 @@ class MainViewController: BaseViewController {
     }
     
     private func stopDummyLoading() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
             self.stopLoadingIndicator()
-            self.performSegue(withIdentifier: "SearchBicyclesSegue", sender: self)
+            self.performSegue(withIdentifier: "LoginSegue", sender: self)
         }
     }
 }

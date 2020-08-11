@@ -12,10 +12,14 @@ class BaseViewController: LoadingIndicatorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
     }
     
-    private func configureUI() {
-        self.view.backgroundColor = #colorLiteral(red: 0.9684304662, green: 0.9778327037, blue: 0.9590282287, alpha: 1)
+    func displayAlertView() {
+        let alertView = UIAlertController(title: "Velo",
+                                          message: "Thank you for this demo. Just ride it:)",
+                                          preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Dismiss", style: .default)
+        alertView.addAction(alertAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 }
