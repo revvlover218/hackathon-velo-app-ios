@@ -16,7 +16,7 @@ class BaseViewController: LoadingIndicatorViewController {
     
     func displayAlertView() {
         let alertView = UIAlertController(title: "Velo",
-                                          message: "This feature will be availabe soon! Thank you.",
+                                          message: "Thank you for this demo. Just ride it:)",
                                           preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Dismiss", style: .default)
         alertView.addAction(alertAction)
