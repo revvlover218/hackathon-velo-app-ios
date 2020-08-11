@@ -10,7 +10,7 @@ import UIKit
 
 class SearchBicyclesViewController: BaseViewController {
     
-    @IBOutlet var searchView: UIView!
+    @IBOutlet var searchView: CustomUIView!
     @IBOutlet var searchtextField: UITextField!
     
     private var bicycles = MainBicyclesList()
@@ -20,24 +20,11 @@ class SearchBicyclesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         filteredBicycles = bicycles
-        configureSearchView()
         configureSearchTextField()
     }
 }
 
-// Custom UI Layout
-
 extension SearchBicyclesViewController {
-    
-    private func configureSearchView() {
-        searchView.layer.shadowColor = UIColor.black.cgColor
-        searchView.layer.shadowOpacity = 0.2
-        searchView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        searchView.layer.shadowRadius = 25
-        searchView.layer.shouldRasterize = true
-        searchView.layer.rasterizationScale = UIScreen.main.scale
-        searchView.layer.cornerRadius = 30
-    }
     
     private func configureSearchTextField() {
         let placeHolderText = NSAttributedString(string: "Search for a bike...",
