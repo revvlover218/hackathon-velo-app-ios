@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4A240B24E20D3A0008B989 /* EnterEmailAndPasswordScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4A240A24E20D3A0008B989 /* EnterEmailAndPasswordScreen.storyboard */; };
+		6D4A240D24E20D450008B989 /* EnterEmailAndPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A240C24E20D450008B989 /* EnterEmailAndPasswordViewController.swift */; };
+		6D4A241324E20F770008B989 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4A241224E20F770008B989 /* CustomUIView.swift */; };
 		6D62566124D70A050031D594 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566024D70A050031D594 /* LoadingIndicatorView.swift */; };
 		6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */; };
 		6D62566B24D716630031D594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566A24D716630031D594 /* BaseViewController.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D4A240A24E20D3A0008B989 /* EnterEmailAndPasswordScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterEmailAndPasswordScreen.storyboard; sourceTree = "<group>"; };
+		6D4A240C24E20D450008B989 /* EnterEmailAndPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailAndPasswordViewController.swift; sourceTree = "<group>"; };
+		6D4A241224E20F770008B989 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		6D62566024D70A050031D594 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		6D62566A24D716630031D594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -72,10 +78,36 @@
 		6D04ADD424E0AC57007E2ED5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				6D4A240824E20CD80008B989 /* Screen 1 */,
+				6D4A240924E20CEF0008B989 /* Screen 2 */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		6D4A240824E20CD80008B989 /* Screen 1 */ = {
+			isa = PBXGroup;
+			children = (
 				6D994D3C24E1D27C0002064C /* LoginScreen.storyboard */,
 				6D994D3E24E1D28A0002064C /* LoginViewController.swift */,
 			);
-			name = Login;
+			name = "Screen 1";
+			sourceTree = "<group>";
+		};
+		6D4A240924E20CEF0008B989 /* Screen 2 */ = {
+			isa = PBXGroup;
+			children = (
+				6D4A240A24E20D3A0008B989 /* EnterEmailAndPasswordScreen.storyboard */,
+				6D4A240C24E20D450008B989 /* EnterEmailAndPasswordViewController.swift */,
+			);
+			name = "Screen 2";
+			sourceTree = "<group>";
+		};
+		6D4A241124E20F540008B989 /* Custom UIVIew */ = {
+			isa = PBXGroup;
+			children = (
+				6D4A241224E20F770008B989 /* CustomUIView.swift */,
+			);
+			name = "Custom UIVIew";
 			sourceTree = "<group>";
 		};
 		6D62565A24D708760031D594 /* Launch Screen */ = {
@@ -126,6 +158,7 @@
 		6D62565F24D709B90031D594 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				6D4A241124E20F540008B989 /* Custom UIVIew */,
 				6D62566924D7162D0031D594 /* View Controller */,
 				6DFA53BC24D9E7BD0020AABE /* Buttons */,
 			);
@@ -294,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DC759DC24D6D0B200B35E8A /* LaunchScreen.storyboard in Resources */,
+				6D4A240B24E20D3A0008B989 /* EnterEmailAndPasswordScreen.storyboard in Resources */,
 				6D994D3D24E1D27C0002064C /* LoginScreen.storyboard in Resources */,
 				6DE79E1C24D6DE2A0096859B /* ViewBicyclesScreen.storyboard in Resources */,
 				6DC759D924D6D0B200B35E8A /* Assets.xcassets in Resources */,
@@ -314,6 +348,7 @@
 				6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */,
 				6D963E8924DB49B8009F0D93 /* MainBicyclesList.swift in Sources */,
 				6D994D3F24E1D28A0002064C /* LoginViewController.swift in Sources */,
+				6D4A241324E20F770008B989 /* CustomUIView.swift in Sources */,
 				6D963E8B24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
 				6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */,
@@ -325,6 +360,7 @@
 				6DFA53BE24D9E8290020AABE /* RoundedSquareButton.swift in Sources */,
 				6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */,
 				6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */,
+				6D4A240D24E20D450008B989 /* EnterEmailAndPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

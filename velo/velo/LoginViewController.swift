@@ -34,12 +34,19 @@ class LoginViewController: BaseViewController {
     // MARK: - IBOutlet
     
     @IBAction func registerButtonTapped(_ sender: RoundedSquareButton) {
+        nextScreen()
     }
     
     @IBAction func loginButtonTapped(_ sender: RoundedSquareButton) {
+        nextScreen()
     }
     
     @IBAction func noRegistrationButtonTapped(_ sender: RoundedSquareButton) {
+        //View bicycles screen
+    }
+    
+    private func nextScreen() {
+        performSegue(withIdentifier: "EnterEmailSegue", sender: self)
     }
 
     // MARK: - Touch button Animations
@@ -61,7 +68,6 @@ class LoginViewController: BaseViewController {
         invertSpinnerImageColor()
         originalHeight = layeredViewHeightConstraint.constant
         layeredViewHeightConstraint.constant = 0
-        layeredView.layer.cornerRadius = 25
         registerButton.alpha = 0
         loginButton.alpha = 0
         continueWithoutRegistrationButton.alpha = 0
