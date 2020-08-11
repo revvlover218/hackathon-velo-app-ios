@@ -15,6 +15,7 @@
 		6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */; };
 		6D62566B24D716630031D594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566A24D716630031D594 /* BaseViewController.swift */; };
 		6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */; };
+		6D7D580024E2A804002F15C4 /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */; };
 		6D7E435424DC7B3E00D228A7 /* SearchBicycleScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E435324DC7B3E00D228A7 /* SearchBicycleScreen.storyboard */; };
 		6D7E435624DC7B5700D228A7 /* SearchBicyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E435524DC7B5700D228A7 /* SearchBicyclesViewController.swift */; };
 		6D963E8224DB1484009F0D93 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D963E8124DB1484009F0D93 /* Icons.xcassets */; };
@@ -44,6 +45,7 @@
 		6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		6D62566A24D716630031D594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 		6D7E435324DC7B3E00D228A7 /* SearchBicycleScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBicycleScreen.storyboard; sourceTree = "<group>"; };
 		6D7E435524DC7B5700D228A7 /* SearchBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBicyclesViewController.swift; sourceTree = "<group>"; };
 		6D963E8124DB1484009F0D93 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		6D62565F24D709B90031D594 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				6D7D57FE24E2A7D4002F15C4 /* Custom Image View */,
 				6D4A241424E21BAE0008B989 /* CustomTextField */,
 				6D4A241124E20F540008B989 /* Custom UIVIew */,
 				6D62566924D7162D0031D594 /* View Controller */,
@@ -209,6 +212,14 @@
 				6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		6D7D57FE24E2A7D4002F15C4 /* Custom Image View */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */,
+			);
+			name = "Custom Image View";
 			sourceTree = "<group>";
 		};
 		6D7E435124DC7AD100D228A7 /* Search Bicycles */ = {
@@ -360,6 +371,7 @@
 				6D963E8924DB49B8009F0D93 /* MainBicyclesList.swift in Sources */,
 				6D994D3F24E1D28A0002064C /* LoginViewController.swift in Sources */,
 				6D4A241324E20F770008B989 /* CustomUIView.swift in Sources */,
+				6D7D580024E2A804002F15C4 /* CustomUIImageView.swift in Sources */,
 				6D963E8B24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
 				6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */,
