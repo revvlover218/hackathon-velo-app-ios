@@ -151,6 +151,7 @@ class EnterEmailAndPasswordViewController: BaseViewController {
                                                animations: {
                                                 self.passwordInputStackView.transform = CGAffineTransform(scaleX: originalScale, y: originalScale)
                                                 self.loginButton.backgroundColor = UIColor.systemGray3
+                                                self.loginButton.titleLabel?.textColor = UIColor.black
                                 }) { (finished) in
                                 }
                             }
@@ -179,6 +180,7 @@ extension EnterEmailAndPasswordViewController: UITextFieldDelegate {
                            options: .curveEaseInOut,
                            animations: {
                             self.loginButton.backgroundColor = UIColor.systemIndigo
+                            self.loginButton.titleLabel?.textColor = UIColor.white
             })
         default:
             break
