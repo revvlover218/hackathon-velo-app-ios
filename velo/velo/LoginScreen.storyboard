@@ -110,7 +110,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginScreenForeground" translatesAutoresizingMaskIntoConstraints="NO" id="2Lh-II-1Zf">
-                                <rect key="frame" x="87" y="313" width="240" height="270"/>
+                                <rect key="frame" x="0.0" y="268" width="414" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="KSb-SN-Kca"/>
                                 </constraints>
@@ -131,11 +131,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CUf-YT-8cl" secondAttribute="bottom" id="0dZ-Ig-Lpz"/>
-                            <constraint firstItem="eDa-QH-D2Q" firstAttribute="trailing" secondItem="2Lh-II-1Zf" secondAttribute="trailing" constant="87" id="1DZ-Q2-5St"/>
+                            <constraint firstItem="eDa-QH-D2Q" firstAttribute="trailing" secondItem="2Lh-II-1Zf" secondAttribute="trailing" id="1DZ-Q2-5St"/>
                             <constraint firstItem="CUf-YT-8cl" firstAttribute="leading" secondItem="eDa-QH-D2Q" secondAttribute="leading" id="4Lw-Oi-c2K"/>
-                            <constraint firstItem="2Lh-II-1Zf" firstAttribute="leading" secondItem="eDa-QH-D2Q" secondAttribute="leading" constant="87" id="AMW-Mv-1Yi"/>
+                            <constraint firstItem="2Lh-II-1Zf" firstAttribute="leading" secondItem="eDa-QH-D2Q" secondAttribute="leading" id="AMW-Mv-1Yi"/>
                             <constraint firstItem="Apr-7Y-Tau" firstAttribute="leading" secondItem="eDa-QH-D2Q" secondAttribute="leading" constant="45" id="OGu-3B-UOL"/>
-                            <constraint firstItem="2Lh-II-1Zf" firstAttribute="centerY" secondItem="Nrv-Z7-V9A" secondAttribute="centerY" id="SJr-m5-GYd"/>
+                            <constraint firstItem="2Lh-II-1Zf" firstAttribute="centerY" secondItem="Nrv-Z7-V9A" secondAttribute="centerY" multiplier="0.9" id="SJr-m5-GYd"/>
                             <constraint firstItem="nEm-UT-fdJ" firstAttribute="leading" secondItem="eDa-QH-D2Q" secondAttribute="leading" constant="45" id="TAl-0a-O2S"/>
                             <constraint firstItem="qhp-HF-UOx" firstAttribute="top" secondItem="eDa-QH-D2Q" secondAttribute="top" constant="30" id="Y81-yD-nwJ"/>
                             <constraint firstItem="Apr-7Y-Tau" firstAttribute="top" secondItem="qhp-HF-UOx" secondAttribute="bottom" constant="20" id="ZWo-mK-x0v"/>
@@ -173,7 +173,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LoginScreenForeground" width="180" height="180"/>
+        <image name="LoginScreenForeground" width="360" height="278"/>
         <image name="WheelIcon" width="128" height="128"/>
     </resources>
 </document>
