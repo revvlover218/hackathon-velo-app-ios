@@ -12,8 +12,13 @@ class EnterEmailAndPasswordViewController: BaseViewController {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var logoView: CustomUIView!
+    
+    @IBOutlet var logoStackView: UIStackView!
+    @IBOutlet var emailAddressStackView: UIStackView!
+    @IBOutlet var passwordInputStackView: UIStackView!
     @IBOutlet var emailInputView: CustomTextField!
     @IBOutlet var passwordInputView: CustomTextField!
+    @IBOutlet var loginButton: RoundedSquareButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     @IBOutlet var signUpButton: UIButton!
     
@@ -27,6 +32,11 @@ class EnterEmailAndPasswordViewController: BaseViewController {
         super.viewDidLoad()
         scrollView.delegate = self
         configureUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateStackViews()
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,6 +87,53 @@ class EnterEmailAndPasswordViewController: BaseViewController {
         let forgotPasswordString = NSAttributedString(string: "Forgot Password?", attributes: attributes)
         forgotPasswordButton.setAttributedTitle(forgotPasswordString, for: .normal)
     }
+
+    private func animateStackViews() {
+        let duration = 0.3
+        let scaleBig: CGFloat = 1.1
+        let originalScale: CGFloat = 1
+        let delay = 0.0
+        
+        UIView.animate(withDuration: duration,
+                       delay: delay,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.logoStackView.transform = CGAffineTransform(scaleX: scaleBig, y: scaleBig)
+        }) { (finished) in
+            if finished {
+                UIView.animate(withDuration: duration,
+                               delay: 0,
+                               options: .curveEaseInOut,
+                               animations: {
+                                self.logoStackView.transform = CGAffineTransform(scaleX: originalScale, y: originalScale)
+                                self.emailAddressStackView.transform = CGAffineTransform(scaleX: scaleBig, y: scaleBig)
+
+                }) { (finished) in
+                    if finished {
+                        UIView.animate(withDuration: duration,
+                                       delay: 0,
+                                       options: .curveEaseInOut,
+                                       animations: {
+                                        self.emailAddressStackView.transform = CGAffineTransform(scaleX: originalScale, y: originalScale)
+                                        self.passwordInputStackView.transform = CGAffineTransform(scaleX: scaleBig, y: scaleBig)
+                        }) { (finished) in
+                            if finished {
+                                UIView.animate(withDuration: duration,
+                                               delay: 0,
+                                               options: .curveEaseInOut,
+                                               animations: {
+                                                self.passwordInputStackView.transform = CGAffineTransform(scaleX: originalScale, y: originalScale)
+                                                self.loginButton.backgroundColor = UIColor.systemGray3
+                                }) { (finished) in
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 extension EnterEmailAndPasswordViewController: UITextFieldDelegate {
@@ -90,6 +147,12 @@ extension EnterEmailAndPasswordViewController: UITextFieldDelegate {
         case passwordInputView:
             password = textField.text ?? ""
             passwordInputView.resignFirstResponder()
+            UIView.animate(withDuration: 0.3,
+                           delay: 0.5,
+                           options: .curveEaseInOut,
+                           animations: {
+                            self.loginButton.backgroundColor = UIColor.systemIndigo
+            })
         default:
             break
         }
