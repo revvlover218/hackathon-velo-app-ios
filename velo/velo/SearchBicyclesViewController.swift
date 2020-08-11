@@ -15,7 +15,7 @@ class SearchBicyclesViewController: BaseViewController {
     @IBOutlet var quickFilterLabel: CustomLabel!
     @IBOutlet var removeFilterButton: RoundedSquareButton!
     @IBOutlet var quickFilterCollectionView: UICollectionView!
-    
+    @IBOutlet var bicycleCollectionView: UICollectionView!
     
     private var bicycles = MainBicyclesList()
     private var filteredBicycles = MainBicyclesList()
@@ -69,6 +69,23 @@ class SearchBicyclesViewController: BaseViewController {
             self.quickFilterCollectionView.reloadData()
         }
     }
+    
+    private func animateReloadBicycleList() {
+        UIView.animate(withDuration: 0.2) {
+            self.bicycleCollectionView.reloadData()
+        }
+    }
+    
+    private func searchList(with searchText: String) {
+        var filterList = [BicycleItem]()
+        _ = bicycles.bicylesList.map { (bicycle) in
+            if ((bicycle.name?.uppercased().contains(searchText.uppercased())) != nil) {
+                filterList.append(bicycle)
+            }
+        }
+        filteredBicycles.bicylesList = filterList
+        animateReloadBicycleList()
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -81,8 +98,7 @@ extension SearchBicyclesViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let searchText = textField.text {
-            print(searchText)
-            //Call search method here
+            searchList(with: searchText)
         }
     }
     
@@ -126,6 +142,8 @@ extension SearchBicyclesViewController: UICollectionViewDataSource {
         switch collectionView {
         case quickFilterCollectionView:
             return QuickFilterList.list.count
+        case bicycleCollectionView:
+            return filteredBicycles.bicylesList.count
         default:
             return 0
         }
@@ -137,27 +155,13 @@ extension SearchBicyclesViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuickFilterCell", for: indexPath) as! QuickFilterCollectionViewCell
             cell.setup(with: QuickFilterList.list[indexPath.row])
             return cell
+        case bicycleCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BicycleCollectionViewCell", for: indexPath) as! BicycleCollectionViewCell
+            let bicycle = filteredBicycles.bicylesList[indexPath.row]
+            cell.setBicyle(with: bicycle)
+            return cell
         default:
             return UICollectionViewCell()
         }
     }
 }
-//func numberOfSections(in collectionView: UICollectionView) -> Int {
-//    return 1
-//}
-//
-//func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//    return filteredBicycles.bicylesList.count
-//}
-//
-//func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BicycleCollectionViewCell", for: indexPath) as! BicycleCollectionViewCell
-//    let bicycle = filteredBicycles.bicylesList[indexPath.row]
-//    cell.setBicyle(with: bicycle)
-//    return cell
-//}
-//
-//func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    selectedBicycle = filteredBicycles.bicylesList[indexPath.row]
-//    performSegue(withIdentifier: "LoginSegue", sender: self)
-//}
