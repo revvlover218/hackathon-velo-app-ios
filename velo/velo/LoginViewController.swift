@@ -33,20 +33,8 @@ class LoginViewController: BaseViewController {
     
     // MARK: - IBOutlet
     
-    @IBAction func registerButtonTapped(_ sender: RoundedSquareButton) {
-        nextScreen()
-    }
-    
-    @IBAction func loginButtonTapped(_ sender: RoundedSquareButton) {
-        nextScreen()
-    }
-    
     @IBAction func noRegistrationButtonTapped(_ sender: RoundedSquareButton) {
         //View bicycles screen
-    }
-    
-    private func nextScreen() {
-        performSegue(withIdentifier: "EnterEmailSegue", sender: self)
     }
 
     // MARK: - Touch button Animations
@@ -57,9 +45,33 @@ class LoginViewController: BaseViewController {
         }
     }
     
-    @IBAction private func touchCancelled(with sender: RoundedSquareButton) {
+    @IBAction private func touchedUp(with sender: RoundedSquareButton) {
         UIView.animate(withDuration: 0.2) {
             sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
+    @IBAction private func nextScreen(with sender: RoundedSquareButton) {
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { (finished) in
+            if finished {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    self.performSegue(withIdentifier: "EnterEmailSegue", sender: nil)
+                }
+            }
+        }
+    }
+    
+    @IBAction private func noFeatureScreen(with sender: RoundedSquareButton) {
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { (finished) in
+            if finished {
+                self.displayAlertView()
+            }
         }
     }
     

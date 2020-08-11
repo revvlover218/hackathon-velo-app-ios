@@ -18,6 +18,10 @@ class EnterEmailAndPasswordViewController: BaseViewController {
     @IBOutlet var signUpButton: UIButton!
     
     private var intialScrollOffset: CGFloat = 100
+    private var emailAddress = ""
+    private var password = ""
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +50,8 @@ class EnterEmailAndPasswordViewController: BaseViewController {
         }
     }
     
-    
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        let alertView = UIAlertController(title: "Velo",
-                                          message: "This feature will be availabe soon! Thank you.",
-                                          preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Dismiss", style: .default)
-        alertView.addAction(alertAction)
-        self.present(alertView, animated: true, completion: nil)
+        displayAlertView()
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
@@ -88,15 +86,15 @@ extension EnterEmailAndPasswordViewController: UITextFieldDelegate {
             if let passwordInputView = passwordInputView {
                 passwordInputView.becomeFirstResponder()
             }
+            emailAddress = textField.text ?? ""
         case passwordInputView:
+            password = textField.text ?? ""
             passwordInputView.resignFirstResponder()
         default:
             break
         }
         return true
     }
-    
-    
 }
 
 extension EnterEmailAndPasswordViewController: UIScrollViewDelegate {

@@ -12,9 +12,14 @@ class BaseViewController: LoadingIndicatorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
     }
     
-    private func configureUI() {
+    func displayAlertView() {
+        let alertView = UIAlertController(title: "Velo",
+                                          message: "This feature will be availabe soon! Thank you.",
+                                          preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Dismiss", style: .default)
+        alertView.addAction(alertAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 }

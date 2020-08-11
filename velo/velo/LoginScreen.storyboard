@@ -42,11 +42,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="registerButtonTapped:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="2Jz-fs-jcl"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchDragInside" id="6gg-MF-CyL"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="hBY-pW-1pp"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchDragOutside" id="leo-yH-yIC"/>
+                                            <action selector="noFeatureScreenWith:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="PKk-vi-W3T"/>
                                             <action selector="touchedDownWith:" destination="axm-FQ-iXJ" eventType="touchDown" id="h1R-zY-lBQ"/>
+                                            <action selector="touchedUpWith:" destination="axm-FQ-iXJ" eventType="touchDragExit" id="ILg-L2-9FK"/>
+                                            <action selector="touchedUpWith:" destination="axm-FQ-iXJ" eventType="touchDragOutside" id="XKd-za-bba"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-Zj-PKz" customClass="RoundedSquareButton" customModule="Velo" customModuleProvider="target">
@@ -66,11 +65,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="COn-Rp-GSU"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchDragInside" id="XpC-FC-dBy"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="jge-Ti-RHx"/>
-                                            <action selector="touchCancelledWith:" destination="axm-FQ-iXJ" eventType="touchUpOutside" id="yd3-El-Rtx"/>
+                                            <action selector="nextScreenWith:" destination="axm-FQ-iXJ" eventType="touchUpInside" id="7IB-0X-c5O"/>
                                             <action selector="touchedDownWith:" destination="axm-FQ-iXJ" eventType="touchDown" id="Q2u-Do-o4I"/>
+                                            <action selector="touchedUpWith:" destination="axm-FQ-iXJ" eventType="touchDragOutside" id="EcQ-Ow-2Lp"/>
+                                            <action selector="touchedUpWith:" destination="axm-FQ-iXJ" eventType="touchDragExit" id="J3d-ZV-etA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz6-Zr-fhf" customClass="RoundedSquareButton" customModule="Velo" customModuleProvider="target">
