@@ -72,6 +72,33 @@ class EnterEmailAndPasswordViewController: BaseViewController {
         // Goto --> 4 main buttons screen
     }
     
+    @IBAction private func touchedDown(with sender: RoundedSquareButton) {
+        UIView.animate(withDuration: 0.2) {
+            sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }
+    }
+    
+    @IBAction private func touchedUp(with sender: RoundedSquareButton) {
+        UIView.animate(withDuration: 0.2) {
+            sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
+    @IBAction private func nextScreen(with sender: RoundedSquareButton) {
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { (finished) in
+            if finished {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    // Segue to main menu screen
+                    //Search for now for devving.
+                    self.performSegue(withIdentifier: "SearchBicycleSegue", sender: nil)
+                }
+            }
+        }
+    }
+    
     // MARK: - Private
     
     private func configureUI() {
