@@ -23,8 +23,8 @@ class LoadingIndicatorView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureAnimatorView()
         drawBackgroundLayer()
+        configureAnimatorView()
         animateView()
     }
     
