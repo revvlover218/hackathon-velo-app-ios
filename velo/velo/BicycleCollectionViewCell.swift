@@ -14,6 +14,36 @@ class BicycleCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var image: UIImageView!
     @IBOutlet private var shadowView: UIView!
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                UIView.animate(withDuration: 0.2) {
+                    self.shadowView.backgroundColor = .systemIndigo
+                }
+            } else {
+                UIView.animate(withDuration: 0.2) {
+                    self.shadowView.backgroundColor = UIColor.systemGray4
+                }
+            }
+        }
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted {
+                UIView.animate(withDuration: 0.2) {
+                    self.contentView.backgroundColor = UIColor.systemIndigo
+                    self.contentView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                }
+            } else {
+                UIView.animate(withDuration: 0.2) {
+                    self.contentView.backgroundColor = nil
+                    self.contentView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }
+            }
+        }
+    }
+    
     func setBicyle(with item: BicycleItem) {
         title.text = item.name
         image.image = item.image

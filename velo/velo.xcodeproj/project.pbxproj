@@ -15,6 +15,10 @@
 		6D62566424D70E1D0031D594 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */; };
 		6D62566B24D716630031D594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62566A24D716630031D594 /* BaseViewController.swift */; };
 		6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */; };
+		6D7D580024E2A804002F15C4 /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */; };
+		6D7D580324E3013B002F15C4 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D580224E3013B002F15C4 /* CustomLabel.swift */; };
+		6D7D580624E314C4002F15C4 /* QuickFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D580524E314C4002F15C4 /* QuickFilterCollectionViewCell.swift */; };
+		6D7D580924E316F4002F15C4 /* QuickFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D580824E316F4002F15C4 /* QuickFilterModel.swift */; };
 		6D7E435424DC7B3E00D228A7 /* SearchBicycleScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E435324DC7B3E00D228A7 /* SearchBicycleScreen.storyboard */; };
 		6D7E435624DC7B5700D228A7 /* SearchBicyclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E435524DC7B5700D228A7 /* SearchBicyclesViewController.swift */; };
 		6D963E8224DB1484009F0D93 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D963E8124DB1484009F0D93 /* Icons.xcassets */; };
@@ -44,6 +48,10 @@
 		6D62566324D70E1D0031D594 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		6D62566A24D716630031D594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6D7C91D124D7284B009A30F6 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
+		6D7D580224E3013B002F15C4 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		6D7D580524E314C4002F15C4 /* QuickFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D7D580824E316F4002F15C4 /* QuickFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFilterModel.swift; sourceTree = "<group>"; };
 		6D7E435324DC7B3E00D228A7 /* SearchBicycleScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBicycleScreen.storyboard; sourceTree = "<group>"; };
 		6D7E435524DC7B5700D228A7 /* SearchBicyclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBicyclesViewController.swift; sourceTree = "<group>"; };
 		6D963E8124DB1484009F0D93 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -168,6 +176,8 @@
 		6D62565F24D709B90031D594 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				6D7D580124E3011F002F15C4 /* Custom Label */,
+				6D7D57FE24E2A7D4002F15C4 /* Custom Image View */,
 				6D4A241424E21BAE0008B989 /* CustomTextField */,
 				6D4A241124E20F540008B989 /* Custom UIVIew */,
 				6D62566924D7162D0031D594 /* View Controller */,
@@ -211,13 +221,71 @@
 			name = Navigation;
 			sourceTree = "<group>";
 		};
+		6D7D57FE24E2A7D4002F15C4 /* Custom Image View */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D57FF24E2A804002F15C4 /* CustomUIImageView.swift */,
+			);
+			name = "Custom Image View";
+			sourceTree = "<group>";
+		};
+		6D7D580124E3011F002F15C4 /* Custom Label */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D580224E3013B002F15C4 /* CustomLabel.swift */,
+			);
+			name = "Custom Label";
+			sourceTree = "<group>";
+		};
+		6D7D580424E3149C002F15C4 /* Collection cells */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D580A24E31871002F15C4 /* Quick filter */,
+				6D7D580B24E31886002F15C4 /* Bicycles */,
+			);
+			name = "Collection cells";
+			sourceTree = "<group>";
+		};
+		6D7D580724E316DB002F15C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D580824E316F4002F15C4 /* QuickFilterModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6D7D580A24E31871002F15C4 /* Quick filter */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D580524E314C4002F15C4 /* QuickFilterCollectionViewCell.swift */,
+				6D7D580724E316DB002F15C4 /* Model */,
+			);
+			name = "Quick filter";
+			sourceTree = "<group>";
+		};
+		6D7D580B24E31886002F15C4 /* Bicycles */ = {
+			isa = PBXGroup;
+			children = (
+				6D963E8A24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift */,
+				6D7D580C24E31895002F15C4 /* Model */,
+			);
+			name = Bicycles;
+			sourceTree = "<group>";
+		};
+		6D7D580C24E31895002F15C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D963E8824DB49B8009F0D93 /* MainBicyclesList.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6D7E435124DC7AD100D228A7 /* Search Bicycles */ = {
 			isa = PBXGroup;
 			children = (
 				6D7E435324DC7B3E00D228A7 /* SearchBicycleScreen.storyboard */,
 				6D7E435524DC7B5700D228A7 /* SearchBicyclesViewController.swift */,
-				6D963E8824DB49B8009F0D93 /* MainBicyclesList.swift */,
-				6D963E8A24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift */,
+				6D7D580424E3149C002F15C4 /* Collection cells */,
 			);
 			name = "Search Bicycles";
 			sourceTree = "<group>";
@@ -360,17 +428,21 @@
 				6D963E8924DB49B8009F0D93 /* MainBicyclesList.swift in Sources */,
 				6D994D3F24E1D28A0002064C /* LoginViewController.swift in Sources */,
 				6D4A241324E20F770008B989 /* CustomUIView.swift in Sources */,
+				6D7D580024E2A804002F15C4 /* CustomUIImageView.swift in Sources */,
 				6D963E8B24DB4FD0009F0D93 /* BicycleCollectionViewCell.swift in Sources */,
 				6DC759CD24D6D0B000B35E8A /* AppDelegate.swift in Sources */,
+				6D7D580624E314C4002F15C4 /* QuickFilterCollectionViewCell.swift in Sources */,
 				6D7C91D224D7284B009A30F6 /* BaseNavigationViewController.swift in Sources */,
 				6D4A241624E21BCD0008B989 /* CustomTextField.swift in Sources */,
 				6DC759CF24D6D0B000B35E8A /* SceneDelegate.swift in Sources */,
+				6D7D580324E3013B002F15C4 /* CustomLabel.swift in Sources */,
 				6D7E435624DC7B5700D228A7 /* SearchBicyclesViewController.swift in Sources */,
 				6DC759D724D6D0B000B35E8A /* velo.xcdatamodeld in Sources */,
 				6D62566B24D716630031D594 /* BaseViewController.swift in Sources */,
 				6D62566124D70A050031D594 /* LoadingIndicatorView.swift in Sources */,
 				6DFA53BE24D9E8290020AABE /* RoundedSquareButton.swift in Sources */,
 				6DE79E1E24D6DE3E0096859B /* ViewBicyclesViewController.swift in Sources */,
+				6D7D580924E316F4002F15C4 /* QuickFilterModel.swift in Sources */,
 				6DE79E2124D6DE870096859B /* ViewBicyclesViewModel.swift in Sources */,
 				6D4A240D24E20D450008B989 /* EnterEmailAndPasswordViewController.swift in Sources */,
 			);

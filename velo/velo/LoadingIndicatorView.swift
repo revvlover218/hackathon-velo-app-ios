@@ -23,8 +23,8 @@ class LoadingIndicatorView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureAnimatorView()
         drawBackgroundLayer()
+        configureAnimatorView()
         animateView()
     }
     
@@ -45,7 +45,7 @@ class LoadingIndicatorView: UIView {
     
     private func drawBackgroundLayer() {
         backgroundLayer.frame = screenBounds
-        backgroundLayer.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
+        backgroundLayer.backgroundColor = #colorLiteral(red: 0.584369123, green: 0.6489875913, blue: 0.6522293091, alpha: 1)
         backgroundLayer.opacity = 0.5
         self.layer.addSublayer(backgroundLayer)
     }

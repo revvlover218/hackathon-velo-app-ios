@@ -77,22 +77,11 @@ class LoginViewController: BaseViewController {
     
     // MARK: - Private
     private func configureUI() {
-        invertSpinnerImageColor()
         originalHeight = layeredViewHeightConstraint.constant
         layeredViewHeightConstraint.constant = 0
         registerButton.alpha = 0
         loginButton.alpha = 0
         continueWithoutRegistrationButton.alpha = 0
-    }
-    
-    private func invertSpinnerImageColor() {
-        if let spinnerImage = spinnerImageView.image {
-            let originalImage = CIImage(image: spinnerImage)
-            let filter = CIFilter(name: "CIColorInvert")
-            filter?.setValue(originalImage, forKey: kCIInputImageKey)
-            let invertedImage = UIImage(ciImage: (filter?.outputImage)!)
-            spinnerImageView.image = invertedImage
-        }
     }
 }
 

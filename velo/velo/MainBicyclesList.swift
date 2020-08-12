@@ -34,6 +34,24 @@ struct MainBicyclesList {
                     type: .mountainBike),
         BicycleItem(name: "2020 Liv Embolden E+2 E-Mountain Bike",
                     image: UIImage(named: "Bike4"),
-                    type: .eBike)
+                    type: .eBike),
+        BicycleItem(name: "2020 Liv Pique 3 Lady’s Mountain Bike",
+                    image: UIImage(named: "Bike3"),
+                    type: .timeTrialBike),
+        BicycleItem(name: "2020 Liv Embolden E+2 E-Mountain Bike",
+                    image: UIImage(named: "Bike4"),
+                    type: .eBike),
+        BicycleItem(name: "2020 Liv Pique 3 Lady’s Mountain Bike",
+                    image: UIImage(named: "Bike3"),
+                    type: .timeTrialBike),
+        BicycleItem(name: "2020 Liv Embolden E+2 E-Mountain Bike",
+                    image: UIImage(named: "Bike4"),
+                    type: .eBike),
+        BicycleItem(name: "2020 Liv Pique 3 Lady’s Mountain Bike",
+                    image: UIImage(named: "Bike3"),
+                    type: .mountainBike),
+        BicycleItem(name: "2020 Liv Embolden E+2 E-Mountain Bike",
+                    image: UIImage(named: "Bike4"),
+                    type: .roadBike)
     ]
 }

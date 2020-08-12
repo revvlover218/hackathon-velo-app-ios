@@ -68,10 +68,6 @@ class EnterEmailAndPasswordViewController: BaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func loginButtonTapped(_ sender: RoundedSquareButton) {
-        // Goto --> 4 main buttons screen
-    }
-    
     @IBAction private func touchedDown(with sender: RoundedSquareButton) {
         UIView.animate(withDuration: 0.2) {
             sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
@@ -90,16 +86,20 @@ class EnterEmailAndPasswordViewController: BaseViewController {
                         sender.transform = CGAffineTransform(scaleX: 1, y: 1)
         }) { (finished) in
             if finished {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    // Segue to main menu screen
-                    //Search for now for devving.
-                    self.performSegue(withIdentifier: "SearchBicycleSegue", sender: nil)
-                }
+                self.startLoadingIndicator()
+                self.animateToNextScreen()
             }
         }
     }
     
     // MARK: - Private
+    
+    private func animateToNextScreen() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.stopLoadingIndicator()
+            self.performSegue(withIdentifier: "SearchBicycleSegue", sender: nil)
+        }
+    }
     
     private func configureUI() {
         configureButtons()
@@ -151,6 +151,7 @@ class EnterEmailAndPasswordViewController: BaseViewController {
                                                animations: {
                                                 self.passwordInputStackView.transform = CGAffineTransform(scaleX: originalScale, y: originalScale)
                                                 self.loginButton.backgroundColor = UIColor.systemGray3
+                                                self.loginButton.titleLabel?.textColor = UIColor.black
                                 }) { (finished) in
                                 }
                             }
@@ -179,6 +180,7 @@ extension EnterEmailAndPasswordViewController: UITextFieldDelegate {
                            options: .curveEaseInOut,
                            animations: {
                             self.loginButton.backgroundColor = UIColor.systemIndigo
+                            self.loginButton.titleLabel?.textColor = UIColor.white
             })
         default:
             break

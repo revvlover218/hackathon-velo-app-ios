@@ -10,8 +10,12 @@ import UIKit
 
 class SearchBicyclesViewController: BaseViewController {
     
-    @IBOutlet var searchView: UIView!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var searchtextField: UITextField!
+    @IBOutlet var quickFilterLabel: CustomLabel!
+    @IBOutlet var removeFilterButton: RoundedSquareButton!
+    @IBOutlet var quickFilterCollectionView: UICollectionView!
+    @IBOutlet var bicycleCollectionView: UICollectionView!
     
     private var bicycles = MainBicyclesList()
     private var filteredBicycles = MainBicyclesList()
@@ -20,23 +24,39 @@ class SearchBicyclesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         filteredBicycles = bicycles
-        configureSearchView()
+        configureUI()
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func removeFilterButtonTapped(_ sender: RoundedSquareButton) {
+        configureQuickFilter(with: "", isSelected: false)
+        animateReloadQuickFilter()
+        animateReloadBicycleList()
+        filteredBicycles = bicycles
+    }
+    
+    // MARK: - Private
+
+    private func configureUI() {
+        removeFilterButton.isHidden = true
+        configureNameLabel()
         configureSearchTextField()
     }
-}
-
-// Custom UI Layout
-
-extension SearchBicyclesViewController {
     
-    private func configureSearchView() {
-        searchView.layer.shadowColor = UIColor.black.cgColor
-        searchView.layer.shadowOpacity = 0.2
-        searchView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        searchView.layer.shadowRadius = 25
-        searchView.layer.shouldRasterize = true
-        searchView.layer.rasterizationScale = UIScreen.main.scale
-        searchView.layer.cornerRadius = 30
+    private func configureNameLabel() {
+        let name = "John"
+        nameLabel.text = "Hi \(name),"
+    }
+    
+    private func configureQuickFilter(with text: String, isSelected: Bool) {
+        if (isSelected) {
+            self.quickFilterLabel.text = "Quick Filter: \(text)"
+            self.removeFilterButton.isHidden = false
+        } else {
+            self.quickFilterLabel.text = "Quick Filter"
+            self.removeFilterButton.isHidden = true
+        }
     }
     
     private func configureSearchTextField() {
@@ -44,8 +64,33 @@ extension SearchBicyclesViewController {
                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         searchtextField.attributedPlaceholder = placeHolderText
     }
+    
+    private func animateReloadQuickFilter() {
+        UIView.animate(withDuration: 0.2) {
+            self.quickFilterCollectionView.reloadData()
+        }
+    }
+    
+    private func animateReloadBicycleList() {
+        UIView.animate(withDuration: 0.2) {
+            self.bicycleCollectionView.reloadData()
+            self.bicycleCollectionView.isDirectionalLockEnabled = true
+        }
+    }
+    
+    private func searchList(with searchText: String) {
+        var filterList = [BicycleItem]()
+        _ = bicycles.bicylesList.map { (bicycle) in
+            if ((bicycle.name?.uppercased().contains(searchText.uppercased())) != nil) {
+                filterList.append(bicycle)
+            }
+        }
+        filteredBicycles.bicylesList = filterList
+        animateReloadBicycleList()
+    }
 }
 
+// MARK: - UITextFieldDelegate
 extension SearchBicyclesViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -55,8 +100,7 @@ extension SearchBicyclesViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let searchText = textField.text {
-            print(searchText)
-            //Call search method here
+            searchList(with: searchText)
         }
     }
     
@@ -65,24 +109,62 @@ extension SearchBicyclesViewController: UITextFieldDelegate {
     }
 }
 
-extension SearchBicyclesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+// MARK: - UICollectionViewDelegate
+extension SearchBicyclesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case quickFilterCollectionView:
+            let selectedFilter = QuickFilterList.list[indexPath.row]
+            var filterList = [BicycleItem]()
+            _ = bicycles.bicylesList.map { (bicycle) in
+                if (bicycle.type == selectedFilter.type) {
+                    filterList.append(bicycle)
+                }
+            }
+            filteredBicycles.bicylesList = filterList
+            configureQuickFilter(with: selectedFilter.title, isSelected: true)
+            animateReloadBicycleList()
+        default:
+            break
+        }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case quickFilterCollectionView:
+            configureQuickFilter(with: "", isSelected: false)
+        default:
+            break
+        }
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension SearchBicyclesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filteredBicycles.bicylesList.count
+        switch collectionView {
+        case quickFilterCollectionView:
+            return QuickFilterList.list.count
+        case bicycleCollectionView:
+            return filteredBicycles.bicylesList.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BicycleCollectionViewCell", for: indexPath) as! BicycleCollectionViewCell
-        let bicycle = filteredBicycles.bicylesList[indexPath.row]
-        cell.setBicyle(with: bicycle)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedBicycle = filteredBicycles.bicylesList[indexPath.row]
-        performSegue(withIdentifier: "LoginSegue", sender: self)
+        switch collectionView {
+        case quickFilterCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuickFilterCell", for: indexPath) as! QuickFilterCollectionViewCell
+            cell.setup(with: QuickFilterList.list[indexPath.row])
+            return cell
+        case bicycleCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BicycleCollectionViewCell", for: indexPath) as! BicycleCollectionViewCell
+            let bicycle = filteredBicycles.bicylesList[indexPath.row]
+            cell.setBicyle(with: bicycle)
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
     }
 }
