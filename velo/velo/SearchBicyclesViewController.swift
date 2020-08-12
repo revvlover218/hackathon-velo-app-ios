@@ -32,6 +32,7 @@ class SearchBicyclesViewController: BaseViewController {
     @IBAction func removeFilterButtonTapped(_ sender: RoundedSquareButton) {
         configureQuickFilter(with: "", isSelected: false)
         animateReloadQuickFilter()
+        animateReloadBicycleList()
         filteredBicycles = bicycles
     }
     
@@ -73,6 +74,7 @@ class SearchBicyclesViewController: BaseViewController {
     private func animateReloadBicycleList() {
         UIView.animate(withDuration: 0.2) {
             self.bicycleCollectionView.reloadData()
+            self.bicycleCollectionView.isDirectionalLockEnabled = true
         }
     }
     
@@ -121,6 +123,7 @@ extension SearchBicyclesViewController: UICollectionViewDelegate {
             }
             filteredBicycles.bicylesList = filterList
             configureQuickFilter(with: selectedFilter.title, isSelected: true)
+            animateReloadBicycleList()
         default:
             break
         }
